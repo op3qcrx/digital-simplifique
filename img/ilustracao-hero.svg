@@ -1,0 +1,11 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450' width='800' height='450' role='img' aria-label='Ilustração de pessoas usando dispositivos'>
+  <rect width='800' height='450' fill='#0ea5e9'/>
+  <g fill='white' opacity='0.95'>
+    <rect x='60' y='180' width='240' height='160' rx='16'/>
+    <rect x='340' y='120' width='360' height='220' rx='20'/>
+    <circle cx='160' cy='220' r='24'/>
+    <rect x='100' y='320' width='160' height='8' rx='4'/>
+    <rect x='380' y='320' width='280' height='12' rx='6'/>
+  </g>
+  <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='28' fill='#00334a' aria-hidden='true'>Acessibilidade</text>
+</svg>

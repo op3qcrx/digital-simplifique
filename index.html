@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Web Acessível — Experiência para Todos</title>
+  <meta name="description" content="Projeto exemplo focado em acessibilidade web: navegação por teclado, alto contraste, ajuste de fonte e semântica correta.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+
+  <header class="topbar" role="banner">
+    <div class="container topbar__inner">
+      <a class="brand" href="#inicio">
+        <img src="img/hero.svg" alt="" width="32" height="32" aria-hidden="true">
+        <span>Web Acessível</span>
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <ul>
+          <li><a href="#intro">Introdução</a></li>
+          <li><a href="#recursos">Recursos</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="controls" aria-label="Preferências de exibição">
+        <button id="btn-contrast" class="btn" type="button" aria-pressed="false">Alto contraste</button>
+        <div class="font-controls" role="group" aria-label="Tamanho da fonte">
+          <button id="font-dec" class="btn" type="button" aria-describedby="tip-font">A-</button>
+          <button id="font-reset" class="btn" type="button">A</button>
+          <button id="font-inc" class="btn" type="button">A+</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <section id="intro" class="hero container" aria-labelledby="titulo-hero">
+      <div class="hero__text">
+        <h1 id="titulo-hero">Acessibilidade é para todo mundo</h1>
+        <p>Este site foi construído com foco em pessoas. Ele demonstra práticas simples que melhoram a experiência de quem usa leitor de tela, navega por teclado ou precisa de mais contraste/tamanho de letra.</p>
+        <ul class="checklist">
+          <li>HTML semântico com landmarks</li>
+          <li>Teclas <kbd>Tab</kbd> e <kbd>Shift</kbd>+<kbd>Tab</kbd> funcionam bem</li>
+          <li>Botão de alto contraste e ajuste de fonte</li>
+          <li>Texto alternativo descritivo nas imagens</li>
+        </ul>
+        <a class="btn btn-primary" href="#recursos">Ver recursos</a>
+      </div>
+      <figure class="hero__media">
+        <img src="img/ilustracao-hero.svg" width="640" height="360" alt="Ilustração abstrata representando pessoas interagindo com dispositivos de diferentes tamanhos">
+        <figcaption class="sr-only">Ilustração de acessibilidade digital</figcaption>
+      </figure>
+    </section>
+
+    <section id="recursos" class="container" aria-labelledby="titulo-recursos">
+      <h2 id="titulo-recursos">Recursos de acessibilidade neste projeto</h2>
+      <div class="grid">
+        <article class="card" tabindex="0" aria-labelledby="c1-title">
+          <img class="card__img" src="img/card-teclado.svg" alt="Ícone de teclado com setas">
+          <div class="card__body">
+            <h3 id="c1-title">Navegação por teclado</h3>
+            <p>Ordem de foco lógica, visível e previsível. Elementos clicáveis são acessíveis via teclado.</p>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0" aria-labelledby="c2-title">
+          <img class="card__img" src="img/card-contraste.svg" alt="Ícone de alto contraste com metade clara e metade escura">
+          <div class="card__body">
+            <h3 id="c2-title">Alto contraste</h3>
+            <p>Alternância de tema para melhorar a legibilidade em ambientes com pouca luz ou baixa visão.</p>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0" aria-labelledby="c3-title">
+          <img class="card__img" src="img/card-fonte.svg" alt="Ícone representando letras A pequenas e grandes">
+          <div class="card__body">
+            <h3 id="c3-title">Ajuste de fonte</h3>
+            <p>Controles para aumentar, diminuir ou resetar o tamanho base de fonte com persistência.</p>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0" aria-labelledby="c4-title">
+          <img class="card__img" src="img/card-semantic.svg" alt="Ícone representando marcação semântica de HTML">
+          <div class="card__body">
+            <h3 id="c4-title">HTML semântico</h3>
+            <p>Uso de <code>header</code>, <code>main</code>, <code>section</code> e <code>footer</code> para orientar tecnologias assistivas.</p>
+          </div>
+        </article>
+      </div>
+      <div id="status" class="status" aria-live="polite"></div>
+    </section>
+
+    <section id="galeria" class="container" aria-labelledby="titulo-galeria">
+      <h2 id="titulo-galeria">Galeria descritiva</h2>
+      <p>Veja algumas ilustrações simples em SVG. Cada imagem possui texto alternativo objetivo.</p>
+      <div class="gallery">
+        <figure>
+          <img src="img/gal-1.svg" alt="Pessoa usando leitor de tela em um laptop">
+          <figcaption>Pessoas e tecnologias assistivas</figcaption>
+        </figure>
+        <figure>
+          <img src="img/gal-2.svg" alt="Mão pressionando a tecla Tab no teclado">
+          <figcaption>Navegação por teclado</figcaption>
+        </figure>
+        <figure>
+          <img src="img/gal-3.svg" alt="Botão com símbolo de alto contraste">
+          <figcaption>Contraste aumentável</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="contato" class="container" aria-labelledby="titulo-contato">
+      <h2 id="titulo-contato">Fale com a gente</h2>
+      <form class="form" aria-describedby="ajuda-form">
+        <p id="ajuda-form">Todos os campos marcados com * são obrigatórios.</p>
+        <div class="field">
+          <label for="nome">Nome *</label>
+          <input id="nome" name="nome" type="text" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="email">E-mail *</label>
+          <input id="email" name="email" type="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="mensagem">Mensagem *</label>
+          <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <p>Feito com ♥ pensando em acessibilidade. <a href="#inicio">Voltar ao topo</a></p>
+      <small>Conteúdo e ilustrações SVG autorais deste projeto.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
