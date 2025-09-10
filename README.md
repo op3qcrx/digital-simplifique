@@ -4,7 +4,7 @@
 Site feito de forma simples e bem feito, implementando recursos de acessibilidade com html, css e javascript
 
 ## Preview do Projeto
-<img width="1445" height="878" alt="tela de inicio" src="https://github.com/user-attachments/assets/7f95b7c0-9458-450f-8bb9-9b8cdd608451" />
+<img width="1239" height="861" alt="aaaaaaa" src="https://github.com/user-attachments/assets/3dfd66c9-2f25-4992-9b1d-6f18b0498da4" />
 <img width="1202" height="730" alt="inicio" src="https://github.com/user-attachments/assets/283d77a5-107a-46cc-847f-b3ce7ae0d6db" />
 
 ## Tecnologias
